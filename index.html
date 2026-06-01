@@ -7,56 +7,87 @@
   <title>Euphoria Lounge, Bar & Restaurant | Humble, Houston TX</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://stream.mux.com">
+  <link rel="preconnect" href="https://image.mux.com">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-contact">
+        <span class="top-bar-item"><a href="tel:+18004602686">+1 800-460-2686</a></span>
+        <span class="top-bar-item"><a href="https://instagram.com/euphorialoungevibez" target="_blank" rel="noopener noreferrer">@euphorialoungevibez</a></span>
+        <span class="top-bar-item top-bar-item--hours">
+          <i class="fa-regular fa-clock" aria-hidden="true"></i>
+          Wed–Thu 8PM–2AM · Fri–Sat 7PM–3AM
+          <span class="top-bar-status" id="top-bar-status" aria-live="polite"></span>
+        </span>
+      </div>
+      <div class="top-bar-social" aria-label="Social media">
+        <a href="https://facebook.com" class="top-bar-social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://instagram.com/euphorialoungevibez" class="top-bar-social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://twitter.com" class="top-bar-social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+        <a href="https://tiktok.com" class="top-bar-social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
   <nav class="nav" aria-label="Main navigation">
-    <a href="#hero" class="nav-logo">
-      <svg viewBox="0 0 40 32" width="32" height="32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 28L8 10L16 18L20 6L24 18L32 10L36 28H4Z" fill="#C9A84C" opacity="0.9"/>
-        <circle cx="4" cy="10" r="2" fill="#C9A84C"/>
-        <circle cx="20" cy="6" r="2" fill="#C9A84C"/>
-        <circle cx="36" cy="10" r="2" fill="#C9A84C"/>
-        <rect x="4" y="27" width="32" height="3" fill="#C9A84C"/>
-      </svg>
-      EUPHORIA
-    </a>
-    <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#parties">Private Events</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#reservation">Reservations</a></li>
-    </ul>
-    <button type="button" class="nav-cta" data-scroll="reservation"><span>Reserve Now</span></button>
+    <div class="nav-bar">
+      <div class="nav-group nav-group--left">
+        <ul class="nav-links nav-links--left">
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#parties">Private Events</a></li>
+        </ul>
+      </div>
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.png" alt="Euphoria">
+      </a>
+      <div class="nav-group nav-group--right">
+        <ul class="nav-links nav-links--right">
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reservation">Reservations</a></li>
+        </ul>
+        <button type="button" class="nav-cta" data-scroll="reservation"><span>Reserve Now</span></button>
+      </div>
+    </div>
     <button type="button" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <div class="mobile-menu" aria-hidden="true">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#menu">Menu</a>
-    <a href="#events">Events</a>
-    <a href="#parties">Private Events</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#reservation">Reservations</a>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+    <nav class="mobile-menu-panel" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#events">Events</a>
+      <a href="#parties">Private Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservation">Reservations</a>
+    </nav>
   </div>
 
   <main>
     <!-- HERO -->
     <section class="hero section" id="hero">
-      <div class="hero-bg" role="img" aria-label="Moody upscale lounge interior"></div>
-      <div class="hero-ornament" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <video
+          class="hero-bg-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://image.mux.com/enkPTZU5TZJ2UcuIGbD7Q49I3QYA007Wmp019voyBI5wA/thumbnail.webp?width=1920"
+        ></video>
+      </div>
       <div class="hero-content">
-        <p class="hero-eyebrow">Welcome to</p>
-        <h1 class="hero-title"><span>EUPHORIA</span></h1>
-        <p class="hero-subtitle">Lounge, Bar &amp; Restaurant</p>
+        <h1 class="hero-subtitle">Lounge, Bar &amp; Restaurant</h1>
         <p class="hero-tagline">Humble, TX · Upscale Atmosphere for the Mature</p>
         <div class="hero-actions">
           <button type="button" class="btn-primary" data-scroll="reservation"><span>Reserve a Table</span></button>
@@ -358,7 +389,7 @@
           <article class="event-card fade-up d3">
             <span class="event-badge">Weekly</span>
             <div class="event-img-wrap">
-              <img class="event-img" src="https://images.unsplash.com/photo-1578898886225-b5a60fc2e985?w=800&auto=format&fit=crop&q=80" alt="Wednesday grown and sexy lounge night" width="800" height="450" loading="lazy">
+              <img class="event-img" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80" alt="Wednesday grown and sexy lounge night with live R&amp;B" width="800" height="450" loading="lazy">
             </div>
             <div class="event-body">
               <p class="event-date">Every Wednesday</p>
@@ -374,38 +405,43 @@
     <section class="parties-section section" id="parties">
       <div class="parties-bg" aria-hidden="true"></div>
       <div class="section-inner">
-        <div class="parties-content">
-          <p class="section-label fade-up">Exclusive Gatherings</p>
-          <h2 class="section-heading fade-up d1">Private Events<br>&amp; <span>Parties</span></h2>
-          <div class="gold-divider left" aria-hidden="true"></div>
-          <p class="body-copy fade-up d2">Euphoria provides the perfect upscale backdrop for your most memorable occasions. From intimate birthday gatherings to large corporate events, our private event team handles every detail so you can focus on the moment.</p>
-          <ul class="parties-list fade-up d3">
-            <li>Birthday &amp; Milestone Celebrations</li>
-            <li>Corporate &amp; Company Events</li>
-            <li>Graduation &amp; School Parties</li>
-            <li>Networking &amp; Social Mixers</li>
-            <li>Holiday &amp; Seasonal Parties</li>
-            <li>VIP Bottle Service Buyouts</li>
-          </ul>
-          <button type="button" class="btn-primary fade-up d4" data-scroll="reservation"><span>Inquire About Private Events</span></button>
+        <div class="parties-layout">
+          <div class="parties-content">
+            <p class="section-label fade-up">Exclusive Gatherings</p>
+            <h2 class="section-heading fade-up d1">Private Events<br>&amp; <span>Parties</span></h2>
+            <div class="gold-divider left" aria-hidden="true"></div>
+            <p class="body-copy fade-up d2">Euphoria provides the perfect upscale backdrop for your most memorable occasions. From intimate birthday gatherings to large corporate events, our private event team handles every detail so you can focus on the moment.</p>
+            <ul class="parties-list fade-up d3">
+              <li>Birthday &amp; Milestone Celebrations</li>
+              <li>Corporate &amp; Company Events</li>
+              <li>Graduation &amp; School Parties</li>
+              <li>Networking &amp; Social Mixers</li>
+              <li>Holiday &amp; Seasonal Parties</li>
+              <li>VIP Bottle Service Buyouts</li>
+            </ul>
+            <button type="button" class="btn-primary fade-up d4" data-scroll="reservation"><span>Inquire About Private Events</span></button>
+          </div>
+          <div class="parties-visual fade-up d2">
+            <img src="https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=900&auto=format&fit=crop&q=80" alt="Guests celebrating at a private event in Euphoria" width="900" height="1125" loading="lazy">
+          </div>
         </div>
-        <div class="parties-cards">
-          <article class="parties-card fade-up d1">
-            <div class="parties-card-icon" aria-hidden="true">🥂</div>
-            <h3>VIP Bottle Service</h3>
-            <p>Dedicated server, custom ice luges, premium bottle selections with full sparkler presentation.</p>
-          </article>
-          <article class="parties-card fade-up d2">
-            <div class="parties-card-icon" aria-hidden="true">🎂</div>
-            <h3>Birthday Packages</h3>
-            <p>Signature cake, complimentary bottle, reserved VIP seating, and personalized décor.</p>
-          </article>
-          <article class="parties-card fade-up d3">
-            <div class="parties-card-icon" aria-hidden="true">🏢</div>
-            <h3>Corporate Events</h3>
-            <p>Full buyouts, AV equipment, catered menus, and custom branding opportunities available.</p>
-          </article>
-        </div>
+      </div>
+      <div class="parties-cards">
+        <article class="parties-card fade-up d1">
+          <div class="parties-card-icon" aria-hidden="true"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>VIP Bottle Service</h3>
+          <p>Dedicated server, custom ice luges, premium bottle selections with full sparkler presentation.</p>
+        </article>
+        <article class="parties-card fade-up d2">
+          <div class="parties-card-icon" aria-hidden="true"><i class="fa-solid fa-cake-candles"></i></div>
+          <h3>Birthday Packages</h3>
+          <p>Signature cake, complimentary bottle, reserved VIP seating, and personalized décor.</p>
+        </article>
+        <article class="parties-card fade-up d3">
+          <div class="parties-card-icon" aria-hidden="true"><i class="fa-solid fa-building"></i></div>
+          <h3>Corporate Events</h3>
+          <p>Full buyouts, AV equipment, catered menus, and custom branding opportunities available.</p>
+        </article>
       </div>
     </section>
 
@@ -456,15 +492,15 @@
             <p class="body-copy">Secure your spot at one of Houston's most sought-after lounge experiences. Walk-ins welcome, but reservations ensure your preferred seating and VIP arrangements.</p>
             <div class="reservation-contact">
               <div class="res-contact-item">
-                <div class="res-contact-icon" aria-hidden="true">📍</div>
+                <div class="res-contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
                 <span>Humble Area, Houston, TX</span>
               </div>
               <div class="res-contact-item">
-                <div class="res-contact-icon" aria-hidden="true">📞</div>
+                <div class="res-contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
                 <a href="tel:+18004602686">+1 800-460-2686</a>
               </div>
               <div class="res-contact-item">
-                <div class="res-contact-icon" aria-hidden="true">📱</div>
+                <div class="res-contact-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></div>
                 <a href="https://instagram.com/euphorialoungevibez" target="_blank" rel="noopener noreferrer">@euphorialoungevibez</a>
               </div>
             </div>
@@ -593,10 +629,10 @@
             <p>Stay connected · <a href="https://instagram.com/euphorialoungevibez" target="_blank" rel="noopener noreferrer">@euphorialoungevibez</a></p>
           </div>
           <div class="social-icons fade-up d2">
-            <a href="https://facebook.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span aria-hidden="true">f</span></a>
-            <a href="https://instagram.com/euphorialoungevibez" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span aria-hidden="true">◈</span></a>
-            <a href="https://twitter.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><span aria-hidden="true">𝕏</span></a>
-            <a href="https://tiktok.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><span aria-hidden="true">♪</span></a>
+            <a href="https://facebook.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/euphorialoungevibez" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://twitter.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://tiktok.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -608,21 +644,14 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#hero" class="nav-logo">
-            <svg viewBox="0 0 40 32" width="32" height="32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 28L8 10L16 18L20 6L24 18L32 10L36 28H4Z" fill="#C9A84C" opacity="0.9"/>
-              <circle cx="4" cy="10" r="2" fill="#C9A84C"/>
-              <circle cx="20" cy="6" r="2" fill="#C9A84C"/>
-              <circle cx="36" cy="10" r="2" fill="#C9A84C"/>
-              <rect x="4" y="27" width="32" height="3" fill="#C9A84C"/>
-            </svg>
-            EUPHORIA
+            <img src="images/logo.png" alt="Euphoria">
           </a>
           <p>An upscale lounge experience crafted for the mature, the distinguished, and those who appreciate the finer things. Located in the Humble area of Houston, TX.</p>
           <div class="social-icons">
-            <a href="https://facebook.com" class="social-icon social-icon--sm" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span aria-hidden="true">f</span></a>
-            <a href="https://instagram.com/euphorialoungevibez" class="social-icon social-icon--sm" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span aria-hidden="true">◈</span></a>
-            <a href="https://twitter.com" class="social-icon social-icon--sm" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><span aria-hidden="true">𝕏</span></a>
-            <a href="https://tiktok.com" class="social-icon social-icon--sm" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><span aria-hidden="true">♪</span></a>
+            <a href="https://facebook.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/euphorialoungevibez" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://twitter.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="https://tiktok.com" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-col">
@@ -669,6 +698,7 @@
     ✓ Reservation request received — we'll confirm shortly!
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.20/dist/hls.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
