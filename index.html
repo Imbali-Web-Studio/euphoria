@@ -637,6 +637,10 @@
         </div>
       </div>
     </section>
+    <section id="specials">
+      <h2>Daily Specials</h2>
+      <div id="daily-specials"></div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -700,5 +704,17 @@
 
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.20/dist/hls.min.js" defer></script>
   <script src="js/main.js" defer></script>
-</body>
+  <script src="./js/specials.js"></script>
+  <script>
+    const container = document.getElementById('daily-specials');
+    if (container && DAILY_SPECIALS.length > 0) {
+      container.innerHTML = DAILY_SPECIALS.map(item => `
+        <div class="special-item">
+          <div class="special-name">${item.name}</div>
+          <div class="special-desc">${item.description}</div>
+          <div class="special-price">${item.price}</div>
+        </div>
+      `).join('');
+    }
+  </script></body>
 </html>
