@@ -637,9 +637,13 @@
         </div>
       </div>
     </section>
-    <section id="specials">
-      <h2>Daily Specials</h2>
-      <div id="daily-specials"></div>
+    <section class="specials-section section" id="specials">
+      <div class="section-inner">
+        <p class="section-label centered fade-up">Chef Curated</p>
+        <h2 class="section-heading text-center fade-up d1">Daily <span>Specials</span></h2>
+        <div class="gold-divider" aria-hidden="true"></div>
+        <div class="specials-grid fade-up d2" id="daily-specials" aria-live="polite"></div>
+      </div>
     </section>
   </main>
 
@@ -702,19 +706,8 @@
     ✓ Reservation request received — we'll confirm shortly!
   </div>
 
+  <script src="./js/specials.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.20/dist/hls.min.js" defer></script>
   <script src="js/main.js" defer></script>
-  <script src="./js/specials.js"></script>
-  <script>
-    const container = document.getElementById('daily-specials');
-    if (container && DAILY_SPECIALS.length > 0) {
-      container.innerHTML = DAILY_SPECIALS.map(item => `
-        <div class="special-item">
-          <div class="special-name">${item.name}</div>
-          <div class="special-desc">${item.description}</div>
-          <div class="special-price">${item.price}</div>
-        </div>
-      `).join('');
-    }
-  </script></body>
+</body>
 </html>
