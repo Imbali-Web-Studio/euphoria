@@ -8,7 +8,6 @@
   const menuPanels = document.querySelectorAll('.menu-panel');
   const reservationForm = document.getElementById('reservation-form');
   const toast = document.getElementById('toast');
-  const dailySpecialsContainer = document.getElementById('daily-specials');
   const fadeUpElements = document.querySelectorAll('.fade-up');
   const heroVideo = document.querySelector('.hero-bg-video');
 
@@ -260,42 +259,4 @@
     setInterval(updateTopBarStatus, 60000);
   }
 
-  /* Daily specials rendering */
-  function renderDailySpecials() {
-    if (!dailySpecialsContainer) {
-      return;
-    }
-
-    var specials = Array.isArray(window.DAILY_SPECIALS) ? window.DAILY_SPECIALS : [];
-
-    if (!specials.length) {
-      dailySpecialsContainer.innerHTML =
-        '<div class="special-empty">No active specials right now.</div>';
-      return;
-    }
-
-    dailySpecialsContainer.innerHTML = specials
-      .map(function (item) {
-        var name = item && item.name ? item.name : 'Daily Special';
-        var description = item && item.description ? item.description : '';
-        var price = item && item.price ? item.price : '';
-
-        return (
-          '<article class="special-item">' +
-          '<h3 class="special-name">' +
-          name +
-          '</h3>' +
-          '<p class="special-desc">' +
-          description +
-          '</p>' +
-          '<p class="special-price">' +
-          price +
-          '</p>' +
-          '</article>'
-        );
-      })
-      .join('');
-  }
-
-  renderDailySpecials();
 })();
